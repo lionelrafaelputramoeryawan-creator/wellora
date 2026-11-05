@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar DOM JS</title>
+  </head>
+  <body>
+    <h1 id="judul">Halo</h1>
+    <p class="info">Teks</p>
+
+    <script>
+      // const judul = document.querySelector('#judul');
+      const judul = document.getElementById("judul");
+      judul.textContent = "Belajar DOM";
+
+      // const info = document.querySelector('.info');
+      const info = document.getElementsByClassName("info")[0];
+      info.innerHTML = "<b>Belajar DOM<b>";
+
+      // querrySelector memilih salah satu elemen
+      // textContent mengisi teks
+      // innerHTML mengisi teks berserta tag HTML
+    </script>
+  </body>
+</html>

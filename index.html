@@ -10,6 +10,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
+
+    <!-- Link Biar Connect Wellora.js -->
+
+
     <title>Wellora</title>
   </head>
   <body>
@@ -45,7 +49,7 @@
 
     <!-- Hero -->
     <section class="hero">
-      <div class="Text-Hero">
+      <div class="text-hero">
         <span class="badge-hero">
           <i class="fa-solid fa-heart"></i> Kesehatanmu, Perjalananmu,
           Prioritasmu
@@ -76,7 +80,7 @@
         </div>
       </div>
 
-      <div class="Gambar-Hero">
+      <div class="gambar-hero">
         <img src="Asset/mobile.png" alt="Mobile aps" class="gambar" />
       </div>
     </section>
@@ -274,86 +278,90 @@
   </div>
 
   <!-- 3card -->
-   <div class="artikel-grid">
-    <!-- Artikel-1 -->
-     <div class="artikel-card">
-      <div class="artikel-img-box">
-        <img src="asset/dan-gold-4_jhDO54BYg-unsplash.jpg" alt="Pola Makan Sehat Nutrisi" class="artikel-img" width="600">
-      </div>
-      <div class="artikel-content">
-      <div class="artikel-meta">
-        <span class=artikel-tag>Nutrisi</span>
-        <span>5 Menit Baca</span>
-      </div>
-      <h3 class="artikel-title">
-        5 Langkah Memulai Pola Makan Sehat Tanpa Diet Menyiksa
-      </h3>
-     <p class="article-snippet">
-      Pelajari cara menyeimbangkan porsi karbohidrat, protein, dan serat harian secara bertahap tanpa perlu rasa lapar berlebihan.
-     </p>
-     <a href="detail-berita.html" class="artikel-link">
-      Baca Selangkapnya
-      <i class="fa-solid fa-arrow-right"></i>
-     </a>
-      </div>
-     </div>
+   <div class="articles-grid">
 
-      <!-- Artikel-2 -->
-     <div class="artikel-card">
-      <div class="artikel-img-box">
-        <img src="asset/bruno-nascimento-PHIgYUGQPvU-unsplash.jpg" alt="Pola Makan Sehat Nutrisi" class="artikel-img" width="600">
-      </div>
-      <div class="artikel-content">
-      <div class="artikel-meta">
-        <span class=artikel-tag>Nutrisi</span>
-        <span>5 Menit Baca</span>
-      </div>
-      <h3 class="artikel-title">
-        5 Langkah Memulai Pola Makan Sehat Tanpa Diet Menyiksa
-      </h3>
-     <p class="article-snippet">
-      Pelajari cara menyeimbangkan porsi karbohidrat, protein, dan serat harian secara bertahap tanpa perlu rasa lapar berlebihan.
-     </p>
-     <a href="" class="artikel-link">
-      Baca Selangkapnya
-      <i class="fa-solid fa-arrow-right"></i>
-     </a>
-      </div>
-     </div>
+           <main class="daftar-kartu" id="daftar-kartu">
 
-      <!-- Artikel-3 -->
-     <div class="artikel-card">
-      <div class="artikel-img-box">
-        <img src="asset/kate-stone-matheson-uy5t-CJuIK4-unsplash.jpg" alt="Pola Makan Sehat Nutrisi" class="artikel-img" width="600">
-      </div>
-      <div class="artikel-content">
-      <div class="artikel-meta">
-        <span class=artikel-tag>Nutrisi</span>
-        <span>5 Menit Baca</span>
-      </div>
-      <h3 class="artikel-title">
-        5 Langkah Memulai Pola Makan Sehat Tanpa Diet Menyiksa
-      </h3>
-     <p class="article-snippet">
-      Pelajari cara menyeimbangkan porsi karbohidrat, protein, dan serat harian secara bertahap tanpa perlu rasa lapar berlebihan.
-     </p>
-     <a href="" class="artikel-link">
-      Baca Selangkapnya
-      <i class="fa-solid fa-arrow-right"></i>
-     </a>
-      </div>
-     </div>
-   </div>
-     </section>
-  <!-- hubungi kami -->
-  <section class="hubkami">
-  <div class="containerhub">
-    <span>
-      <i class="fa-solid fa-headset"></i> Hubungi Kami
-    </span>
-    <h1>Ada Pertanyaan? Kami Siap<br>Membantu</h1>
-    <p>Punya pertanyaan seputar fitur aplikasi wellora, kemitraan, atau ingin berkonsultasi? Kirimkan<br>pesan Anda kepada tim kami.</p>
-  </div>
+           </main>
+
+           <template id="template">
+            <a class="kartu">
+            <h2 class="judul"></h2>
+            <p class="deskripsi"></p>
+            </a>
+          </template>
+          <!-- Artikel 1
+           <div class="article-card">
+            <div class="article-img-box">
+              <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="Pola Makan Sehat Nutrisi" class="article-img" width="600">
+            </div>
+            <div class="article-content">
+              <div class="article-meta">
+                <span class="article-tag">Nutrisi</span>
+                <span>5 menit baca</span>
+              </div>
+              <h3 class="article-title">
+                5 Langkah Memulai Pola Makan Sehat Tanpa Diet Menyiksa
+              </h3>
+              <p class="article-snippet">
+                Pelajari cara menyeimbangkan porsi karbohidrat, protein, dan serat harian secara bertahap tanpa perlu rasa lapar berlebihan.
+              </p>
+              <a href="detail-berita.html?id=1" class="article-link">
+                Baca Selengkapnya
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+
+           </div> -->
+
+            <!-- Artikel 2
+           <div class="article-card">
+            <div class="article-img-box">
+              <img src="https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="Pola Makan Sehat Nutrisi" class="article-img" width="600">
+            </div>
+            <div class="article-content">
+              <div class="article-meta">
+                <span class="article-tag">Kebugaran</span>
+                <span>4 menit baca</span>
+              </div>
+              <h3 class="article-title">
+                Berapa Langkah Kaki yang Sebenarnya Dibutuhkan Tubuh ?
+              </h3>
+              <p class="article-snippet">
+                Kupas tuntas mitos 10.000 langkah dan fakta ilmiah tentang kebutuhan gerak harian untuk menjaga kesehatan jantung dan stamina
+              </p>
+              <a href="detail-berita-1.html?id=1" class="article-link">
+                Baca Selengkapnya
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+
+           </div>
+
+             Artikel 3
+           <div class="article-card">
+            <div class="article-img-box">
+              <img src="https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?q=80&w=2060&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="Pola Makan Sehat Nutrisi" class="article-img" width="600">
+            </div>
+            <div class="article-content">
+              <div class="article-meta">
+                <span class="article-tag">Pola Tidur</span>
+                <span>6 menit baca</span>
+              </div>
+              <h3 class="article-title">
+                Rahasia Tidur Nyenyak Demi Produktivitas Maksimal
+              </h3>
+              <p class="article-snippet">
+                Kualitas tidur menentukan metabolisme tubuh. Terapkan 4 kebiasaan malam ini untuk bangun dengan energi penuh keesokan hari
+              </p>
+              <a href="detail-berita-1.html?id=2" class="article-link">
+                Baca Selengkapnya
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+
+           </div> -->
+         </div>
   </section>
   <section class="help" id="contact">
   <div class="line">
@@ -454,7 +462,7 @@
       <i class="fa-solid fa-arrow-up"></i>
     </button>
 
-    <script>
+    <script src="wellora.js">
       window.addEventListener("scroll", function () {
         const btntop = document.getElementById("btnbacktotop");
 
