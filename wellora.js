@@ -10,7 +10,7 @@ const dataBerita = [
     id: 2,
     judul: "Berapa Langkah Kaki yang Sebenarnya Dibutuhkan Tubuh ?",
     deskripsi: "Kupas tuntas mitos 10.000 langkah dan fakta ilmiah tentang kebutuhan gerak harian untuk menjaga kesehatan jantung dan stamina.",
-    isi: "Website interaktif adalah website yang dapat merespons tindakan pengguna. Dengan menggunakan HTML, CSS, dan JavaScript, kita dapat membuat fitur seperti tombol, formulir, menu navigasi, dan animasi. Website interaktif memberikan pengalaman yang lebih menarik dan memudahkan pengguna dalam mengakses informasi.",
+    isi: "Angka 10.000 langkah populer sebagai target aktivitas harian, tetapi bukan angka wajib bagi semua orang. Sasaran 7.000–10.000 langkah per hari dapat menjadi acuan bagi kebanyakan orang dewasa. Mulailah dari tingkat aktivitas yang sesuai kemampuan, tingkatkan secara bertahap, dan padukan dengan jalan cepat atau naik tangga.",
   },
   {
     id: 3,
