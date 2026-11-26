@@ -128,3 +128,41 @@ footer nav {
     background-color: #a7b9a8b8;
     margin: 25px 0;
 }
+
+@media (max-width: 640px) {
+  .container {
+    padding: 20px 14px;
+  }
+
+  .artikel img {
+    height: 220px;
+  }
+
+  .isi {
+    padding: 22px 18px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  .daftar {
+    flex-direction: column;
+  }
+
+  .kartu {
+    display: flex;
+    align-items: center;
+  }
+
+  .kartu img {
+    width: 110px;
+    height: 90px;
+    flex-shrink: 0;
+  }
+
+  footer nav {
+    flex-wrap: wrap;
+    gap: 12px 20px;
+  }
+}

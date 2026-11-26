@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="id">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -51,12 +51,12 @@
       <div class="text-hero">
         <span class="badge-hero"
           ><i class="fa-solid fa-heart"></i> Kesehatanmu. Perjalananmu.
-          Priotasmu</span
+          Prioritasmu</span
         >
 
         <h1 class="judul-hero">
           Hidup Lebih Baik,<br />
-          Tubuh Lebih Bugas
+          Tubuh Lebih Bugar
         </h1>
 
         <p class="deskripsi-hero">
@@ -184,7 +184,7 @@
               <i class="fa-solid fa-flask-vial"></i>
             </div>
             <div class="value-text">
-              <div class="value-title">Berbasis Sains & Media</div>
+              <div class="value-title">Berbasis Sains & Medis</div>
               <div class="value-desc">
                 Setiap rekomendasi nutrisi dan rutinitas latihan divalidasi oleh
                 dokter serta ahli gizi tersertifikasi.
@@ -264,7 +264,7 @@
          <i class="fa-solid fa-book-open"></i> Edukasi & Inspirasi
          </span>
          <h1>Artikel & Tips Gaya Hidup Sehat<br>Terkini</h1>
-         <p>Perluas wawasan Anda seputar nutrisi, tips olahraga praktis, dan manajemen stres untuk menjaga<br>vitalitas tubuh sepeanjang hari.</p>
+         <p>Perluas wawasan Anda seputar nutrisi, tips olahraga praktis, dan manajemen stres untuk menjaga vitalitas tubuh sepanjang hari.</p>
         </div>
 
         <!-- 3 CARD -->
@@ -296,7 +296,7 @@
             <!-- Artikel 2 -->
            <div class="article-card">
             <div class="article-img-box">
-              <img src="https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="Pola Makan Sehat Nutrisi" class="article-img" width="600">
+              <img src="https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="Seseorang berjalan untuk berolahraga" class="article-img" width="600">
             </div>
             <div class="article-content">
               <div class="article-meta">
@@ -320,7 +320,7 @@
             <!-- Artikel 3 -->
            <div class="article-card">
             <div class="article-img-box">
-              <img src="https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?q=80&w=2060&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="Pola Makan Sehat Nutrisi" class="article-img" width="600">
+              <img src="https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?q=80&w=2060&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="Kamar tidur yang nyaman" class="article-img" width="600">
             </div>
             <div class="article-content">
               <div class="article-meta">
@@ -333,7 +333,7 @@
                 <p class="article-snippet">
                   Terapkan empat kebiasaan malam yang sederhana untuk membantu kualitas tidur dan bangun lebih bertenaga.
                 </p>
-                <a href="berita.html" class="article-link">
+                <a href="detail-artikel3.html" class="article-link">
                 Baca Selengkapnya
                 <i class="fa-solid fa-arrow-right"></i>
               </a>
@@ -351,7 +351,7 @@
       <i class="fa-solid fa-headset"></i> Hubungi Kami
     </span>
     <h1>Ada Pertanyaan? Kami Siap<br>Membantu</h1>
-    <p>Punya pertanyaan seputar fitur aplikasi wellora, kemitraan, atau ingin berkonsultasi? Kirimkan<br>pesan Anda kepada tim kami.</p>
+    <p>Punya pertanyaan seputar fitur aplikasi Wellora, kemitraan, atau ingin berkonsultasi? Kirimkan pesan Anda kepada tim kami.</p>
   </div>
     </section>
     <section class="help" id="contact">
@@ -390,7 +390,7 @@
         </div>
         <div class="linetext">
           <div class="linetitle">Jam Layanan</div>
-         <div class="linedesc">Senin-Jumaat, 08.00-17.00 WIB</div>
+         <div class="linedesc">Senin–Jumat, 08.00–17.00 WIB</div>
         </div>
        </div>
       </div>
@@ -483,9 +483,18 @@
 
     formKontak.addEventListener('submit', function(event) {
       event.preventDefault();
-      statusPesan.textContent = 'Pesan berhasil disiapkan. Terima kasih telah menghubungi Wellora!';
-      formKontak.reset();
+
+      const dataPesan = new FormData(formKontak);
+      const subjek = encodeURIComponent(dataPesan.get('subjek'));
+      const isi = encodeURIComponent(
+        `Nama: ${dataPesan.get('nama')}\nEmail: ${dataPesan.get('email')}\n\n${dataPesan.get('pesan')}`
+      );
+      window.location.href = `mailto:support@wellora.id?subject=${subjek}&body=${isi}`;
+
+      statusPesan.textContent = 'Draf email disiapkan. Tekan Kirim di aplikasi email Anda. Jika aplikasi email tidak terbuka, kirim pesan langsung ke support@wellora.id.';
     });
   </script>
+
+  <script src="wellora.js"></script>
 </body>
 </html>
