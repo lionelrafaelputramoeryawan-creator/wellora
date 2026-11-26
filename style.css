@@ -205,7 +205,7 @@ header {
 
 /* Card atau Box */
 .box {
-  width: 600px;
+  width: 100%;
   height: 200px;
   border-radius: 24px;
   background-color: white;
@@ -590,7 +590,7 @@ header {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.3sx  ease;
+  transition: transform 0.3s ease;
 }
 
 .article-card:hover .article-img{
@@ -628,7 +628,9 @@ header {
 
 .article-snippet{
   margin-bottom: 5px;
-  font-size: 1px;
+  font-size: 14px;
+  color: var(--warna-text-desc);
+  line-height: 1.5;
   margin-top: 2px;
 }
 
@@ -716,7 +718,8 @@ header {
 }
 
 .kirimepesan {
-  width: 1000px;
+  width: 100%;
+  max-width: 620px;
   gap: 16px;
   background-color: white;
   padding: 30px 40px;
@@ -744,12 +747,15 @@ header {
   gap: 20px;
 }
 
-.namalengkap h2 {
+.namalengkap label,
+.alamatemail label,
+.subjekpesan label,
+.pesananda label {
   font-size: 16px;
   color: var(--warna-hijau-gelap);
   line-height: 1.2;
   font-weight: 800;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
 }
 
 .alamatemail h2 {
@@ -769,7 +775,7 @@ header {
     font-family: Arial, sans-serif;
     font-size: 14px;
     box-sizing: border-box;
-    width: 250px;
+    width: 100%;
 }
 
 textarea {
@@ -792,7 +798,13 @@ label {
     font-family: Arial, sans-serif;
     font-size: 14px;
     box-sizing: border-box;
-    width: 235px;
+    width: 100%;
+}
+
+.namalengkap,
+.alamatemail {
+  flex: 1;
+  min-width: 0;
 }
 
 .subjek {
@@ -817,7 +829,7 @@ label {
     font-family: Arial, sans-serif;
     font-size: 14px;
     box-sizing: border-box;
-    width: 500px;
+    width: 100%;
 }
 
 .pesananda h2 {
@@ -848,10 +860,21 @@ textarea::placeholder {
 }
 
 .btnpesan {
+  width: 100%;
   margin-top: 20px;
   background-color: #2ead70;
+  color: white;
   text-align: center;
   border-radius: 30px;
+  padding: 17px 30px;
+  border: none;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
 .btnpesan:hover {
@@ -860,18 +883,6 @@ textarea::placeholder {
   transition: transform 0.2s ease;
 }
 
-
-.btnpesan p {
-  color: white;
-  border-radius: 25px;
-  padding: 17px 30px;
-  border: none;
-  font-weight: 700;
-  font-size: 14px;
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-}
 
 .line {
   width: 90%;
@@ -959,4 +970,135 @@ footer nav {
 .btn-back-to-top:hover {
   background-color: var(--warna-hijau-gelap);
   transform: translateY(-3px);
+}
+
+@media (max-width: 900px) {
+  header {
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  .nav-menu {
+    width: 100%;
+    order: 3;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px 20px;
+  }
+
+  .hero,
+  .about,
+  .card {
+    flex-direction: column;
+  }
+
+  .text-hero,
+  .gambar-hero,
+  .about-kiri,
+  .about-kanan,
+  .solusi-copy,
+  .solusi-grid {
+    width: 100%;
+  }
+
+  .gambar-hero {
+    text-align: center;
+  }
+
+  .solusi {
+    flex-direction: column;
+  }
+
+  .articles-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .line {
+    flex-direction: column;
+  }
+
+  .linevalues,
+  .kirimepesan {
+    max-width: none;
+  }
+
+  .card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  header,
+  .hero,
+  .about,
+  .card,
+  .solusi,
+  .artikel,
+  .hubkami,
+  .line {
+    width: calc(100% - 32px);
+  }
+
+  header {
+    padding: 14px 18px;
+  }
+
+  .nav-button {
+    margin-left: auto;
+  }
+
+  .btn-unduh {
+    padding: 8px 14px;
+  }
+
+  .judul-hero,
+  .artikel h1,
+  .hubkami h1 {
+    font-size: 36px;
+  }
+
+  .button-hero,
+  .nama {
+    flex-direction: column;
+  }
+
+  .btn-hero-1,
+  .btn-hero-2 {
+    width: 100%;
+    text-align: center;
+  }
+
+  .card,
+  .articles-grid,
+  .solusi-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .solusi-card {
+    width: 100%;
+  }
+
+  .about {
+    padding: 30px 20px;
+  }
+
+  .card-about-kanan {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .card-item {
+    width: 100%;
+  }
+
+  .kirimepesan {
+    padding: 24px 20px;
+  }
+
+  footer nav {
+    flex-wrap: wrap;
+    gap: 12px 20px;
+  }
 }
